@@ -1,0 +1,29 @@
+.loader {
+  fill: var(--base-col-white);
+}
+
+@media (prefers-color-scheme: light) {
+  .text {
+    color: var(--base-color-black);
+  }
+}
+
+@mixin color($color) {
+  .loader.#{$color} {
+    fill: var(--base-col-#{$color});
+  }
+}
+
+@include color('gray');
+@include color('red');
+@include color('pink');
+@include color('purple');
+@include color('indigo');
+@include color('blue');
+@include color('cyan');
+@include color('teal');
+@include color('green');
+@include color('lime');
+@include color('yellow');
+@include color('orange');
+@include color('brown');

@@ -1,0 +1,50 @@
+.paper,
+.paper::before {
+  background-color: #202224;
+  background-image: linear-gradient(135.2deg, #1d1f20 -4.16%, #2f3334 111.14%);
+
+  border-radius: 30px;
+}
+
+.paper {
+  flex-shrink: 0;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  place-items: center;
+
+  padding: 1rem;
+  min-width: 80px;
+  min-height: 80px;
+
+  text-decoration: none;
+
+  box-shadow: rgb(0 0 0 / 50%) 0px 35px 60px 5px;
+}
+
+.paper::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  transform: rotateZ(5.1234deg);
+  z-index: -1;
+  content: '';
+}
+
+@media (prefers-color-scheme: light) {
+  .paper,
+  .paper::before {
+    background-color: #f7fafc;
+    background-image: linear-gradient(116.79deg, #f7fafc 0%, #e7edf5 100%);
+
+    border-radius: 30px;
+  }
+
+  .paper {
+    box-shadow: rgb(0 0 0 / 10%) 8px 8px 50px;
+  }
+}

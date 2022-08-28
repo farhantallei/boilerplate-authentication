@@ -1,0 +1,42 @@
+.text {
+  color: var(--base-col-white);
+}
+
+@media (prefers-color-scheme: light) {
+  .text {
+    color: var(--base-col-black);
+  }
+}
+
+@mixin align($align) {
+  .text.#{$align} {
+    text-align: #{$align};
+  }
+}
+
+@mixin color($color) {
+  .text.#{$color} {
+    color: var(--base-col-#{$color});
+  }
+}
+
+@include align('left');
+@include align('right');
+@include align('center');
+@include align('end');
+@include align('start');
+@include align('justify');
+
+@include color('gray');
+@include color('red');
+@include color('pink');
+@include color('purple');
+@include color('indigo');
+@include color('blue');
+@include color('cyan');
+@include color('teal');
+@include color('green');
+@include color('lime');
+@include color('yellow');
+@include color('orange');
+@include color('brown');

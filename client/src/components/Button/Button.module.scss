@@ -1,0 +1,58 @@
+.button {
+  --gradient-color-1: #212325;
+  --gradient-color-2: #202224;
+  --border-transparent: 0.05;
+  --light-transparent: 0.075;
+  background-image: linear-gradient(
+    95.07deg,
+    var(--gradient-color-1) -5.11%,
+    var(--gradient-color-2) 104.81%
+  );
+  height: 3rem;
+  color: var(--base-col-gray-l1);
+  font-weight: 600;
+  border: 1px solid rgba(0, 0, 0, var(--border-transparent));
+  border-radius: 0.5rem;
+  box-shadow: 1.333px 1.333px 8px rgba(0, 0, 0, 0.25),
+    inset 0px 1.333px 0px rgba(255, 255, 255, var(--light-transparent));
+
+  transition: border-width 250ms ease, border-color 250ms ease;
+
+  &:focus,
+  &:focus-within {
+    border-width: 1.5px;
+    border-color: var(--base-col-gray-d1);
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  .button {
+    --gradient-color-1: var(--base-col-blue);
+    --gradient-color-2: #0c67e5;
+    --border-transparent: 0.05;
+    --light-transparent: 0.075;
+    color: var(--base-col-white);
+
+    &:focus,
+    &:focus-within {
+      border-color: var(--base-col-gray-d2);
+    }
+  }
+}
+
+@mixin color-variant($color, $black: false) {
+  .button.#{$color} {
+    --gradient-color-1: var(--base-col-#{$color});
+    --gradient-color-2: #0c67e5;
+    --border-transparent: 0.5;
+    --light-transparent: 0.25;
+
+    &:focus,
+    &:focus-within {
+      border-color: var(--base-col-gray-d1);
+    }
+  }
+}
+
+@include color-variant('black', true);
+@include color-variant('blue');

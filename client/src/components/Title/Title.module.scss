@@ -1,0 +1,36 @@
+.heading {
+  margin: 0;
+  color: var(--base-col-white);
+}
+
+@media (prefers-color-scheme: light) {
+  .heading {
+    color: var(--base-col-black);
+  }
+}
+
+@mixin heading($order, $size) {
+  .h#{$order} {
+    font-size: $size;
+  }
+}
+
+@mixin align($align) {
+  .heading.#{$align} {
+    text-align: #{$align};
+  }
+}
+
+@include heading(1, 2.125em);
+@include heading(2, 1.625em);
+@include heading(3, 1.375em);
+@include heading(4, 1.125em);
+@include heading(5, 1em);
+@include heading(6, 0.875em);
+
+@include align('left');
+@include align('right');
+@include align('center');
+@include align('end');
+@include align('start');
+@include align('justify');

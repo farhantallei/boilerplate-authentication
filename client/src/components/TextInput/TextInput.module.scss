@@ -1,0 +1,32 @@
+.input {
+  color: var(--base-col-gray-l5);
+  font-weight: 600;
+  background-color: #202224;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  height: 3rem;
+  border-radius: 0.5rem;
+  border: 1px solid var(--base-col-gray-d3);
+  transition: border-color 250ms ease;
+
+  &:focus,
+  &:focus-within {
+    outline: none;
+    border-color: var(--base-col-gray-d1);
+  }
+
+  // &[type='password' i] {
+  //   letter-spacing: -3px;
+  // }
+}
+
+@media (prefers-color-scheme: light) {
+  .input {
+    color: var(--base-col-gray-d5);
+    border-color: var(--base-col-gray-l2);
+
+    &::placeholder {
+      color: var(--base-col-gray);
+    }
+  }
+}

@@ -1,0 +1,193 @@
+@font-face {
+  font-family: 'Manrope VF';
+  src: url(/assets/fonts/variable/Manrope[wght].woff2)
+    format('woff2-variations');
+  font-style: normal;
+  font-variation-settings: 'wght' 500;
+  font-variation-ligatures: normal;
+  font-weight: 200 800;
+}
+
+@font-face {
+  font-family: Manrope;
+  src: url(/assets/fonts/webfonts/Manrope-ExtraLight.woff2) format('woff2');
+  font-weight: 200;
+}
+
+@font-face {
+  font-family: Manrope;
+  src: url(/assets/fonts/webfonts/Manrope-Light.woff2) format('woff2');
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: Manrope;
+  src: url(/assets/fonts/webfonts/Manrope-Regular.woff2) format('woff2');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: Manrope;
+  src: url(/assets/fonts/webfonts/Manrope-Medium.woff2) format('woff2');
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: Manrope;
+  src: url(/assets/fonts/webfonts/Manrope-SemiBold.woff2) format('woff2');
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: Manrope;
+  src: url(/assets/fonts/webfonts/Manrope-Bold.woff2) format('woff2');
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: Manrope;
+  src: url(/assets/fonts/webfonts/Manrope-ExtraBold.woff2) format('woff2');
+  font-weight: 800;
+}
+
+:root {
+  --base-line-height: 1.5;
+
+  --paper-background-light: #ffffff;
+  --paper-background-dark: #1e1e1e;
+  --background-light: #fafafa;
+  --background-dark: #242424;
+  --base-col-white: #ffffff;
+  --base-col-black: #000000;
+
+  --base-col-lightred: #ffd0cc;
+  --base-col-red: #ff4433;
+
+  --base-col-pink: #ff4684;
+  --base-col-purple: #d745ff;
+  --base-col-indigo: #7b2fff;
+
+  --base-col-lightblue: #cce1ff;
+  --base-col-blue: #0d72ff;
+
+  --base-col-cyan: #24cfe5;
+  --base-col-teal: #47d2c5;
+
+  --base-col-lightgreen: #d3f8d4;
+  --base-col-green: #2de034;
+
+  --base-col-lime: #8fe517;
+  --base-col-yellow: #ffdd00;
+  --base-col-orange: #ffaa00;
+  --base-col-brown: #8c663f;
+
+  --base-col-gray-l5: #f2f6f8;
+  --base-col-gray-l4: #e4e9eb;
+  --base-col-gray-l3: #ced5d9;
+  --base-col-gray-l2: #c3ccd0;
+  --base-col-gray-l1: #a7b3b9;
+  --base-col-gray: #84969f;
+  --base-col-gray-d1: #5a676d;
+  --base-col-gray-d2: #434c51;
+  --base-col-gray-d3: #353d41;
+  --base-col-gray-d4: #2a2f32;
+  --base-col-gray-d5: #1a1d1e;
+
+  --list-gap: 0.75em;
+  --list-padding-left: 2.5em;
+  --list-padding-right: 0.5em;
+  --list-spacing: 0.25em;
+  --list-border-width: 1px;
+  --list-border-color: var(--base-col-gray-d3);
+  --list-marker-color: var(--base-col-gray-d1);
+  --list-dragger-color: var(--base-col-gray-d2);
+  --list-popup-color: var(--base-col-gray-d2);
+
+  --pop-box-shadow: 0 0 calc(1px / var(--scale-x, 1)) 0 hsl(200deg 5% 90% / 5%);
+  --pop-box-shadow-picked-up: 0px 4px calc(10px / var(--scale-x, 1)) 1px
+    hsl(200deg 5% 90% / 5%);
+
+  font-family: 'Manrope VF', Manrope, -apple-system, BlinkMacSystemFont,
+    Segoe UI, Roboto, Helvetica, Arial, sans-serif, Apple Color Emoji,
+    Segoe UI Emoji;
+  font-size: 16px;
+  line-height: var(--base-line-height);
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: var(--base-col-gray-l5);
+  background-color: #6c7279;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+*,
+*::after,
+*::before {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+::placeholder {
+  letter-spacing: 0 !important;
+}
+
+:-ms-input-placeholder {
+  letter-spacing: 0 !important;
+}
+
+:-moz-placeholder {
+  letter-spacing: 0 !important;
+}
+
+::-moz-placeholder {
+  letter-spacing: 0 !important;
+}
+
+::-webkit-input-placeholder {
+  letter-spacing: 0 !important;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: 'Manrope VF', Manrope, -apple-system, BlinkMacSystemFont,
+    Segoe UI, Roboto, Helvetica, Arial, sans-serif, Apple Color Emoji,
+    Segoe UI Emoji;
+  font-size: 16px;
+  line-height: var(--base-line-height);
+  margin: 0;
+}
+
+button {
+  border: none;
+  outline: none;
+}
+
+body {
+  margin: 0;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --list-border-color: var(--base-col-gray-l4);
+    --list-dragger-color: var(--base-col-gray-l2);
+    --list-popup-color: var(--base-col-gray-l1);
+
+    --pop-box-shadow: 0 0 calc(1px / var(--scale-x, 1)) 0
+      hsl(200deg 5% 10% / 10%);
+    --pop-box-shadow-picked-up: 0px 4px calc(10px / var(--scale-x, 1)) 1px
+      hsl(200deg 5% 10% / 10%);
+
+    color: var(--base-col-gray-d5);
+    background-color: #eff2f5;
+  }
+}
